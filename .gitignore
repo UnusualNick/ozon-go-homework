@@ -1,0 +1,22 @@
+.idea/
+.vscode/
+.DS_Store
+bin/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime data and temporary files
+homework-01/tasks.json
+homework-01/var/
+*.tmp
+*.log
+
+# Locally built binaries
+homework-01/task-tracker
+homework-02/cart
+homework-02/product-service

@@ -1,0 +1,24 @@
+{
+  "openapi": "3.0.3",
+  "info": {"title": "Cart service", "version": "1.0.0"},
+  "servers": [{"url": "http://localhost:8080"}],
+  "paths": {
+    "/user/{user_id}/cart/{sku_id}": {
+      "post": {
+        "parameters": [
+          {"name": "user_id", "in": "path", "required": true, "schema": {"type": "integer", "format": "int64", "minimum": 1}},
+          {"name": "sku_id", "in": "path", "required": true, "schema": {"type": "integer", "format": "int64", "minimum": 1}}
+        ],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"type": "object", "required": ["count"], "properties": {"count": {"type": "integer", "format": "int32", "minimum": 1}}}}}},
+        "responses": {"200": {"description": "Added"}, "400": {"description": "Invalid request"}, "412": {"description": "Product does not exist"}, "500": {"description": "Internal error"}}
+      }
+    },
+    "/user/{user_id}/cart": {
+      "get": {
+        "parameters": [{"name": "user_id", "in": "path", "required": true, "schema": {"type": "integer", "format": "int64", "minimum": 1}}],
+        "responses": {"200": {"description": "Cart"}, "400": {"description": "Invalid request"}, "404": {"description": "Cart is empty"}, "500": {"description": "Internal error"}}
+      }
+    }
+  }
+}
+
