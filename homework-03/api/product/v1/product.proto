@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package product.v1;
+
+option go_package = "github.com/UnusualNick/ozon-go-homework/homework-03/pkg/product/v1;productv1";
+
+service ProductService {
+  rpc GetProduct(GetProductRequest) returns (GetProductResponse);
+  rpc ListProducts(ListProductsRequest) returns (ListProductsResponse);
+}
+
+message Product {
+  int64 sku = 1;
+  string name = 2;
+  int32 price = 3;
+}
+
+message GetProductRequest {
+  int64 sku = 1;
+}
+
+message GetProductResponse {
+  int64 sku = 1;
+  string name = 2;
+  int32 price = 3;
+}
+
+message ListProductsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListProductsResponse {
+  repeated Product products = 1;
+  string next_page_token = 2;
+}
