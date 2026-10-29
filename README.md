@@ -6,7 +6,8 @@
 - [ДЗ 1](homework-01/) — консольный таск-трекер;
 - [ДЗ 2](homework-02/) — gRPC-сервис товаров и HTTP-корзина;
 - [ДЗ 3](https://github.com/UnusualNick/ozon-go-homework/tree/homework/03/homework-03) — тесты и конкурентное чтение корзины, [PR #1](https://github.com/UnusualNick/ozon-go-homework/pull/1);
-- [ДЗ 4](homework-04/) — пять SQL-запросов по данным пользователей и заказов.
+- [ДЗ 4](homework-04/) — пять SQL-запросов по данным пользователей и заказов,
+  [PR #2](https://github.com/UnusualNick/ozon-go-homework/pull/2).
 
 ДЗ 1–3 отправлены через [форму курса](https://t.me/c/3976611877/58)
 27 октября 2026 года; оценок преподавателя пока нет. ДЗ 4 выполнено в ветке
